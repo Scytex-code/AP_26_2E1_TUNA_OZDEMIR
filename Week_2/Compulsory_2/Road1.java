@@ -1,11 +1,11 @@
-public class Road {
+public class Road1 {
     private String type;
     private double length;
     private int speedLimit;
-    private Location source;
-    private Location destination;
+    private Location1 source;
+    private Location1 destination;
 
-    public Road(String type, double length, int speedLimit, Location source, Location destination) {
+    public Road1(String type, double length, int speedLimit, Location1 source, Location1 destination) {
         this.type = type;
         this.speedLimit = speedLimit;
         this.source = source;
@@ -28,11 +28,11 @@ public class Road {
     public int getSpeedLimit() { return speedLimit; }
     public void setSpeedLimit(int speedLimit) { this.speedLimit = speedLimit; }
 
-    public Location getSource() { return source; }
-    public void setSource(Location source) { this.source = source; }
+    public Location1 getSource() { return source; }
+    public void setSource(Location1 source) { this.source = source; }
 
-    public Location getDestination() { return destination; }
-    public void setDestination(Location destination) { this.destination = destination; }
+    public Location1 getDestination() { return destination; }
+    public void setDestination(Location1 destination) { this.destination = destination; }
 
     @Override
     public String toString() {

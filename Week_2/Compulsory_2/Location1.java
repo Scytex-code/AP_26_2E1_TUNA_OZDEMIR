@@ -1,9 +1,9 @@
-public class Location {
+public class Location1 {
     private String name;
     private String type; 
     private double x, y;
 
-    public Location(String name, String type, double x, double y) {
+    public Location1(String name, String type, double x, double y) {
         this.name = name;
         this.type = type;
         this.x = x;
