@@ -1,10 +1,10 @@
-public class Person implements Profile, Comparable<Person> {
+public class Company1 implements Profile1, Comparable<Company1> {
     private String name;
-    private String email;
+    private String headquarters;
 
-    public Person(String name, String email) {
+    public Company1(String name, String headquarters) {
         this.name = name;
-        this.email = email;
+        this.headquarters = headquarters;
     }
 
     @Override
@@ -14,17 +14,17 @@ public class Person implements Profile, Comparable<Person> {
 
     @Override
     public String getContactDetails() {
-        return "Email: " + email;
+        return "HQ: " + headquarters;
     }
 
     @Override
-    public int compareTo(Person other) {
+    public int compareTo(Company1 other) {
         // Natural order: alphabetical by name
         return this.name.compareTo(other.name);
     }
 
     @Override
     public String toString() {
-        return "Person: " + name;
+        return "Company: " + name;
     }
 }

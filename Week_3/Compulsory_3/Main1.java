@@ -2,20 +2,20 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Main {
+public class Main1 {
     public static void main(String[] args) {
         // Create a list holding both persons and companies
-        List<Profile> network = new ArrayList<>();
+        List<Profile1> network = new ArrayList<>();
         
-        network.add(new Person("Zane Smith", "zane@example.com"));
-        network.add(new Company("Tech Innovations Ltd", "San Francisco"));
-        network.add(new Person("Alice Johnson", "alice@example.com"));
-        network.add(new Company("Alpha Analytics", "London"));
+        network.add(new Person1("Zane Smith", "zane@example.com"));
+        network.add(new Company1("Tech Innovations Ltd", "San Francisco"));
+        network.add(new Person1("Alice Johnson", "alice@example.com"));
+        network.add(new Company1("Alpha Analytics", "London"));
 
         // Sort the list using a Comparator on the shared interface method
-        network.sort(new Comparator<Profile>() {
+        network.sort(new Comparator<Profile1>() {
             @Override
-            public int compare(Profile p1, Profile p2) {
+            public int compare(Profile1 p1, Profile1 p2) {
                 return p1.getName().compareTo(p2.getName());
             }
         });
@@ -25,7 +25,7 @@ public class Main {
 
         // Display the sorted list
         System.out.println("--- Sorted List ---");
-        for (Profile profile : network) {
+        for (Profile1 profile : network) {
             System.out.println(profile.toString() + " (" + profile.getContactDetails() + ")");
         }
     }
