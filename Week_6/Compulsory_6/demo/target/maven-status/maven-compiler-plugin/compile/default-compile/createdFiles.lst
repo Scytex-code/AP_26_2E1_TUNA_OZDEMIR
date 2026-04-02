@@ -1,0 +1,3 @@
+com\lab6\App.class
+dao\GenreDAO.class
+database\DatabaseConnection.class

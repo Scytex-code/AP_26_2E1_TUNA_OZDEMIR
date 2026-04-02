@@ -1,0 +1,11 @@
+com\lab6ha\advanced\CSVImporter.class
+com\lab6ha\advanced\MovieListPartitioner.class
+com\lab6ha\model\Genre.class
+com\lab6ha\model\Movie.class
+com\lab6ha\dao\ActorDAO.class
+com\lab6ha\dao\MovieDAO.class
+com\lab6ha\dao\GenreDAO.class
+com\lab6ha\App.class
+com\lab6ha\report\ReportGenerator.class
+com\lab6ha\database\DatabasePool.class
+com\lab6ha\model\Actor.class
