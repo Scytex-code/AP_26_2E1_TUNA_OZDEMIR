@@ -10,23 +10,27 @@ import com.lab6ha.model.Actor;
 
 public class ActorDAO {
 
-    public void create(String name) throws SQLException {
+    // Actor ekle ve ID döndür
+    public int create(String name) throws SQLException {
         String sql = "INSERT INTO actors(name) VALUES(?)";
-
         try (Connection con = DatabaseConnection.getConnection();
-             PreparedStatement stmt = con.prepareStatement(sql)) {
-            
+             PreparedStatement stmt = con.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+
             stmt.setString(1, name);
             stmt.executeUpdate();
+
+            try (ResultSet rs = stmt.getGeneratedKeys()) {
+                if (rs.next()) return rs.getInt(1);
+            }
         }
+        throw new SQLException("Failed to insert actor: " + name);
     }
 
     public Actor findById(int id) throws SQLException {
         String sql = "SELECT id, name FROM actors WHERE id=?";
-
         try (Connection con = DatabaseConnection.getConnection();
              PreparedStatement stmt = con.prepareStatement(sql)) {
-            
+
             stmt.setInt(1, id);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
@@ -42,10 +46,9 @@ public class ActorDAO {
 
     public Actor findByName(String name) throws SQLException {
         String sql = "SELECT id, name FROM actors WHERE name=?";
-
         try (Connection con = DatabaseConnection.getConnection();
              PreparedStatement stmt = con.prepareStatement(sql)) {
-            
+
             stmt.setString(1, name);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
