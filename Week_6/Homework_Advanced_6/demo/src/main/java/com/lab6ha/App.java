@@ -39,7 +39,6 @@ public class App {
 
             // 3️⃣ Unrelated movie lists üret ve DB’ye kaydet
             List<List<Movie>> movieLists = listGen.generateUnrelatedLists();
-            System.out.println("Generated " + movieLists.size() + " unrelated movie lists:");
 
             for (int i = 0; i < movieLists.size(); i++) {
                 List<Movie> list = movieLists.get(i);
@@ -47,14 +46,6 @@ public class App {
 
                 // movie_list tablosuna ekle ve ID al
                 int listId = movieListDAO.create(listName);
-
-                System.out.print(listName + ": ");
-                for (Movie m : list) {
-                    System.out.print(m.getTitle() + ", ");
-                    // movie_list_movies tablosuna ekle
-                    movieListDAO.addMovieToList(listId, m.getId());
-                }
-                System.out.println();
             }
 
             // 4️⃣ HTML raporu aç

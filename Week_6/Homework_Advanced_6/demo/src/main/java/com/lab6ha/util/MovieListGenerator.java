@@ -31,7 +31,7 @@ public class MovieListGenerator {
 
         for (Movie movie : movies) {
             boolean placed = false;
-            // Her listeyi dene
+
             for (List<Movie> list : lists) {
                 if (isUnrelated(movie, list, movieToActors)) {
                     list.add(movie);
@@ -39,6 +39,7 @@ public class MovieListGenerator {
                     break;
                 }
             }
+
             if (!placed) {
                 List<Movie> newList = new ArrayList<>();
                 newList.add(movie);
