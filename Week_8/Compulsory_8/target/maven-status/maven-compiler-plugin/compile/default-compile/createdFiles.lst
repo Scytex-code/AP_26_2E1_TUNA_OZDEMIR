@@ -1,0 +1,7 @@
+com\example\mazeapp\Main.class
+com\example\mazeapp\MainFrame.class
+com\example\mazeapp\ui\ControlPanel.class
+com\example\mazeapp\model\Maze.class
+com\example\mazeapp\model\Cell.class
+com\example\mazeapp\ui\ConfigPanel.class
+com\example\mazeapp\ui\MazeCanvas.class
