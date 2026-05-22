@@ -1,0 +1,15 @@
+com\example\quiz\server\repository\JpaQuestionRepository.class
+com\example\quiz\server\QuizServerApplication.class
+com\example\quiz\server\model\Question.class
+com\example\quiz\server\entity\QuestionEntity.class
+com\example\quiz\server\bot\RandomAiBot.class
+com\example\quiz\server\model\Player.class
+com\example\quiz\server\bot\KnowledgeBaseBot.class
+com\example\quiz\server\repository\QuestionRepository.class
+com\example\quiz\server\bot\BotPlayer.class
+com\example\quiz\server\repository\JpaQuestionCatalog.class
+com\example\quiz\server\bot\LlmBot.class
+com\example\quiz\server\VirtualThreadScenario.class
+com\example\quiz\server\GameServer.class
+com\example\quiz\server\ClientThread.class
+com\example\quiz\server\game\QuizGame.class

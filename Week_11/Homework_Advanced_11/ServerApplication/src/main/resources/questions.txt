@@ -1,0 +1,7 @@
+# Text format:
+# question|answerA|answerB|answerC|answerD|correctLetter
+Which Java class accepts TCP connections?|Socket|ServerSocket|DatagramPacket|URL|B
+Which protocol guarantees ordered byte streams?|UDP|TCP|ICMP|DNS|B
+Which Java package contains Socket and ServerSocket?|java.time|java.net|java.sql|java.nio.file|B
+What command joins a player to this quiz game?|join|mount|attach|enter|A
+What is used here to break score ties?|alphabetical order|total response time|random choice|last answer only|B
